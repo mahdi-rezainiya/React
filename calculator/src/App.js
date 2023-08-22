@@ -1,44 +1,43 @@
 // import logo from './logo.svg';
 import './App.css';
-import {useState} from 'react'
+import {useState} from "react";
 
 function App() {
-  const [display , setDisplay] = useState("") ;
-  const [expression , setExpression] = useState([]) ;
+  const [display , setDisplay] = useState("");
+  const [expression , setExpression] = useState([]);
 
   const handleClick = value => {
     setDisplay(value);
-    setExpression([...expression , value])
-  }
-  const handleResult = () => {
+    setExpression([...expression , value]);
+  };
+  
+  const handleResult = value => {
     const result = expression
     .join("")
     .split(/(\D)/g)
-    .map(value => (value.match(/\d/g) ? parseInt(value , 0 ) : value))
+    .map(value => (value.match(/\d/g) ? parseInt(value , 0) : value))
     .reduce((acc , value , index , array) => {
-      switch (value) {
-          case "+":
-            return (acc = acc + array[index + 1]);
-          case "-":
-            return (acc = acc - array[index + 1]);
-          case "x":
-            return (acc = acc * array[index + 1]);
-          case "÷":
-            return (acc = acc / array[index + 1]);
-          default:
-            return acc;
-        }
-    });
+      switch(value){
+        case "+" :
+          return (acc = acc + array[index +1]);
+        case "-" : 
+          return (acc = acc + array[index + 1]);
+        case "x" :
+          return (acc = acc + array[index + 1]);
+        case "÷" :
+          return (acc = acc + array[index + 1]);
+        default :
+          return acc ;
+      }
+    })
     setDisplay(result);
-    setExpression("");
-
+    setExpression("")
   }
-  return(
+
+  return (
     <div className="App">
-      <h3 className="display">{display}</h3>
-
-      <span className="expression">{expression}</span>
-
+      <div className="display">{display}</div>
+      <h3 className="expression">{expression}</h3>
       <section className="panel">
         <section className="numbers">
           <button onClick={() => handleClick(7)}>7</button>
@@ -55,7 +54,6 @@ function App() {
 
           <button onClick={() => handleClick(0)}>0</button>
         </section>
-
         <section className="operators">
           <button onClick={() => handleClick("÷")}>÷</button>
           <button onClick={() => handleClick("x")}>x</button>
@@ -65,7 +63,8 @@ function App() {
         </section>
       </section>
     </div>
-  );
+    
+  )
 }
 
 export default App;
