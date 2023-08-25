@@ -42,7 +42,8 @@ export default function NewMovieForm(props) {
         // const event = {
         //     title : title.current.value,
         //     date : date.current.value,
-        //     id : Math.floor(Math.random() * 10000)
+        //     id : Math.floor(Math.random() * 10000) ,
+        //     genre : genre
         // }
 
         // console.log(event);
