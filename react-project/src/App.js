@@ -20,6 +20,7 @@ function App() {
     // {title : "HUSTLE (2022)" , id : 6},
   ])
 
+//handleClick 
   const handleClick = (id) => {
     console.log(id);
     setEvents((preEvents) => {
@@ -29,6 +30,7 @@ function App() {
     })
   }
 
+  // addMovie
   const addMovie = (event) => {
     setEvents((prevEvent) => {
       return [...prevEvent , event]
@@ -36,6 +38,7 @@ function App() {
     setShowModal(false)
   }
 
+  // handleClose
   const handleClose = () => {
     setShowModal(false)
   }
