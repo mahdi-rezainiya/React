@@ -1,0 +1,40 @@
+{
+    "trips":[
+        {
+            "title": "4 Night Stay in Tehran",
+            "price": "850T",
+            "loc": "iran",
+            "id": "1"
+        },
+        {
+            "title":"2 Night Stay in Isfahan",
+            "price":"300T",
+            "loc": "iran",
+            "id": "2"
+        },
+        {
+            "title":"1 Night Stay in Ardbil",
+            "price":"140T",
+            "loc": "iran",
+            "id": "3"
+        },
+        {
+            "title":"3 Night Stay in Guilan",
+            "price":"480T",
+            "loc": "iran",
+            "id": "4"
+        },
+        {
+            "title":"3 Night Stay in Shiraz",
+            "price":"400T",
+            "loc": "iran",
+            "id": "5"
+        },
+        {
+            "title":"7 Night Stay in Istanbul",
+            "price":"2500T",
+            "loc": "turkey",
+            "id": "6"
+        }
+    ]
+}
